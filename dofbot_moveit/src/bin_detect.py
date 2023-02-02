@@ -20,7 +20,6 @@ def bin_node():
     # Set the rate at which to publish the result
     rate = rospy.Rate(10) # 10 Hz
 
-    # Publish the result to the arm node
     while True and not rospy.is_shutdown():
         # Read a frame from the video
         _, frame = capture.read()
@@ -31,9 +30,9 @@ def bin_node():
 
         # Run Tesseract OCR on the frame
         text = pytesseract.image_to_string(frame_gray)
-        #text = pytesseract.image_to_string(frame)
 
         # Check for the keywords "paper" and "plastic"
+        # Publish the result to the arm node
         if "paper" in text.lower():
             cv2.putText(frame, "Word \"Paper\" detected", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             pub.publish("Paper bin")
