@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 # coding: utf-8
-
 import Arm_Lib
 import rospy
 from std_msgs.msg import Float64
 
-
 def gripper_callback(msg):
     # Access the gripper position from the received message
-    # open 60.0, close 150.0
+    # open 30.0, close 140.0
     gripper_position = msg.data
-   # Print the value of gripper_position
+    
+    # Print the value of gripper_position
     print("Gripper position: {}".format(gripper_position))
 
     # Set the gripper position
@@ -31,5 +30,3 @@ def gripper_subscriber():
 if __name__ == '__main__':
     sbus = Arm_Lib.Arm_Device()
     gripper_subscriber()
-    
-  
