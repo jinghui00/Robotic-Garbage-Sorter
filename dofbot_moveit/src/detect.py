@@ -160,6 +160,7 @@ class Yolov5Detector:
                     label = f"{self.names[c]} {conf:.2f}"
                     annotator.box_label(xyxy, label, color=colors(c, True))       
                     
+                    # Save the detection result in a text file
                     f = open("/home/dofbot/dofbot_ws/src/dofbot_moveit/src/garbage_result.txt", "w")
                     f.write(label)
                     f.close()
