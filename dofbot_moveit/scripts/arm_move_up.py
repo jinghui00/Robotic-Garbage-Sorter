@@ -25,7 +25,7 @@ def topic(msg):
     # Set joints position
     sbus.Arm_serial_servo_write6_array(joints, 1000)
 
-def move_up(): # arm at middle up
+def move_up(): # Arm at middle up
     print("move upwards")
     dofbot.set_joint_value_target([0.00,0.42,-1.57,-1.57,-0.00])                                 
     dofbot.go()
