@@ -25,6 +25,7 @@ Garbage is put one by one in front of the camera for classification and grasping
 	* `chmod +x <file_name>`
 
 3. Open a new terminal.
+
    `cd dofbot_ws/src/dofbot_moveit/scripts`
    * To run the whole program, bin detection, garbage classification and arm grasping.
      
@@ -37,9 +38,3 @@ Garbage is put one by one in front of the camera for classification and grasping
    * To run only garbage classification and arm grasping
    
      `./detection_garbage.sh`
- 
-4. To run only bin detection, 
-
-
-
-
