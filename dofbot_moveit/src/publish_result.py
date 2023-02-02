@@ -9,7 +9,7 @@ def read_result_from_file():
     result_file.close()
     txt = result.split(" ")
     garbage_type = txt[0].lower()
-    score = txt[1]
+    # score = txt[1]
     return garbage_type
 
 def garbage_node():
@@ -19,16 +19,12 @@ def garbage_node():
     # Create a publisher for the arm node
     pub = rospy.Publisher("arm_node", String, queue_size=10)
 
-    # Set the rate at which to publish the result
-    #rate = rospy.Rate(10) # 10 Hz
-
     # Read the result from the file and publish it to the arm node
     garbage_type = read_result_from_file()
-    rospy.sleep(10)
+    rospy.sleep(10) # to enable the subscriber (arm_node) has enough time to start the program and receive the message
     pub.publish(garbage_type)
     rospy.loginfo("Detected " + garbage_type)
 
-    #rospy.sleep(10)
 
 if __name__ == "__main__":
     try:
