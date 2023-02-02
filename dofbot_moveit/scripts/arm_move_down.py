@@ -4,7 +4,6 @@ import time
 from time import sleep
 import rospy
 from moveit_commander.move_group import MoveGroupCommander
-#import Arm_Lib
 from Arm_Lib import Arm_Device
 from signal import pthread_kill, SIGTSTP
 from math import pi
@@ -18,14 +17,15 @@ RA2DE = 180 / pi
 def topic(msg):
    
     if not isinstance(msg, JointState): return
-    #90 is open, 180 is close
+    # 30 is open, 140 is close
     joints = [0.0, 0.0, 0.0, 0.0, 0.0, 30.0]
    
     for i in range(5): joints[i] = (msg.position[i] * RA2DE) + 90
   
+    # Set joints position
     sbus.Arm_serial_servo_write6_array(joints, 1000)
 
-def move_down(): #middle up
+def move_down(): # Arm at middle down
     print("move downwards")
     dofbot.set_joint_value_target([0.00,-0.95,-0.36,-1.57,-0.00])                                  
     dofbot.go()
