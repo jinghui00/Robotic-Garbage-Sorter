@@ -27,8 +27,8 @@ def topic(msg):
 
 def move_down(): # Arm at middle down
     print("move downwards")
-    dofbot.set_joint_value_target([0.00,-0.95,-0.36,-1.57,-0.00])                                  
-    dofbot.go()
+    dofbot.set_joint_value_target([0.00,-0.95,-0.36,-1.57,-0.00]) # Set new joints position                                  
+    dofbot.go() # Perform action
     sleep(0.5)
 
         
