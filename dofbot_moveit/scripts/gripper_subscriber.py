@@ -6,7 +6,7 @@ from std_msgs.msg import Float64
 
 def gripper_callback(msg):
     # Access the gripper position from the received message
-    # open 30.0, close 140.0
+    # Open 30.0, close 140.0
     gripper_position = msg.data
     
     # Print the value of gripper_position
