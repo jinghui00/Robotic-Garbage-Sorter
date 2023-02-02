@@ -19,4 +19,4 @@ killall --exact roslaunch
 killall --exact rosrun
 rosnode kill -a
 sleep 30
-echo "done bin detection process"
+echo "done bin classification process"
