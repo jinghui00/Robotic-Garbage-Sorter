@@ -8,6 +8,7 @@ import time
 def gripper_publisher():
     print("start gripper")
     st = time.time()
+    
     # Initialize the ROS node
     rospy.init_node('gripper_publisher')
 
@@ -30,7 +31,7 @@ def gripper_publisher():
         print("Error: Angle is not defined")
         
     rospy.sleep(5) # to enable the gripper_subscriber node has enough time to start the program and receive the message
-    pub.publish(msg) # publish the value of angle
+    pub.publish(msg) # Publish the value of angle
     print("done publish gripper")
     
     et = time.time()
