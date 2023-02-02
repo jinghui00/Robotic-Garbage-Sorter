@@ -27,8 +27,8 @@ def topic(msg):
 
 def move_left(): # Arm at left side
     print("search to left")
-    dofbot.set_joint_value_target([-1.49, 0.42, -1.57, -1.57, -0.00])
-    dofbot.go()
+    dofbot.set_joint_value_target([-1.49, 0.42, -1.57, -1.57, -0.00]) # Set new joints position
+    dofbot.go() # Perform action
     sleep(0.5)
 
         
