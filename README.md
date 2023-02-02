@@ -27,7 +27,7 @@ Garbage is put one by one in front of the camera for classification and grasping
 3. To run the whole program, open a new terminal.
 	* cd dofbot_ws/src/dofbot_moveit/scripts
 	* ./run.sh
-	* This will run the bin detection and garbage classification on paper and plastic.
+   This will run the bin detection and garbage classification on paper and plastic.
 
 
 
