@@ -24,12 +24,6 @@ echo "start gripper"
 rosrun dofbot_moveit gripper_subscriber.py &
 rosrun dofbot_moveit gripper_publisher.py &
 sleep 20
-#echo "adjust arm position"
-#rosrun dofbot_moveit arm_move_up.py &
-#sleep 30
-#pkill -f "arm_move_up.py"
-#echo "killed arm_move_up"
-#sleep 10
 echo "start arm to move to bin"
 rosrun dofbot_moveit arm_move_leftright.py &
 sleep 20
