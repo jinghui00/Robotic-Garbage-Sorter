@@ -16,7 +16,7 @@ Garbage is put one by one in front of the camera for classification and grasping
 
 **Usage**
 
-1. Download all the files except `YOLOv5_Custom_Training.ipynb` and move them according to the directory. For example,
+1. Download all the files **except `YOLOv5_Custom_Training.ipynb`** and move them according to the directory. For example,
 	* Go to `dofbot_ws/src/dofbot_moveit`.
 	* Add `yolov5.launch` and `yolov5_d435.launch` to `dofbot_ws/src/dofbot_moveit/launch`.
 	* Same goes to other files in other directories.
