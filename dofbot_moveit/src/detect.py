@@ -161,6 +161,7 @@ class Yolov5Detector:
                     annotator.box_label(xyxy, label, color=colors(c, True))       
                     
                     # Save the detection result in a text file
+                    # The result is overwritten for every frame it detected
                     f = open("/home/dofbot/dofbot_ws/src/dofbot_moveit/src/garbage_result.txt", "w")
                     f.write(label)
                     f.close()
