@@ -13,10 +13,8 @@ def topic(msg): # Create a subscriber callback function
 
     if not isinstance(msg, JointState): return
     
-    # Define the joint angle container, the last one is the angle of the gripper, 
-    # the default gripper does not move is 0
-    # The gripper does not participate in the positive and negative solution of the movement, 
-    # it needs to be controlled separately. Do not set the No.6 servo to 0°
+    # Define the joint angle container, the last one is the angle of the gripper.
+    # Gripper needs to be controlled separately. Do not set the No.6 servo to 0°.
     joints = [0.0, 0.0, 0.0, 0.0, 0.0, 90.0]
 
     # Convert the received angle in radian [-1.57,1.57] to degree [0,180]
