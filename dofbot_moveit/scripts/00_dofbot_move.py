@@ -27,12 +27,8 @@ def topic(msg): # Create a subscriber callback function
 
 if __name__ == '__main__':
     sbus = Arm_Lib.Arm_Device()
-
     rospy.init_node("ros_dofbot")
-    
     # Create a subscriber
     subscriber = rospy.Subscriber("/joint_states", JointState, topic)
-
     rate = rospy.Rate(2)
-
     rospy.spin()
